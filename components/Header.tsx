@@ -6,24 +6,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import styles from "./../styles/Header.module.css";
 
 const Header = () => {
-  const [cursorXY, setCursorXY] = useState({ x: -100, y: -100 });
-  const [buttonHover, setButtonHover] = useState(false);
-
-  const mouseMove = (e: any) => {
-    const { pageX: x, pageY: y } = e;
-    setCursorXY({ x, y });
-  };
-
-  useEffect(() => {
-    document.addEventListener("mousemove", mouseMove);
-
-    return () => {
-      document.removeEventListener("mousemove", mouseMove);
-    };
-  }, []);
-
   return (
-    <header className="relative cursor-none h-screen flex flex-col items-center justify-center bg-black text-white">
+    <header className="relative cursor-none h-screen flex flex-col items-center justify-center bg-black text-white overflow-hidden">
       <div className="z-40 text-center flex flex-col items-center justify-normal px-6 sm:px-12 ">
         <h3 className="text-xl sm:text-2xl md:text-3xl mb-8 text-zinc-500">
           Fullstack Development
@@ -42,8 +26,6 @@ const Header = () => {
           <a href="#contact">
             <motion.button
               whileHover={{ scale: 1.1 }}
-              onHoverStart={() => setButtonHover(true)}
-              onHoverEnd={() => setButtonHover(false)}
               whileTap={{ scale: 0.9 }}
               className="bg-white text-black cursor-none  font-semibold  sm:text-lg mt-12 px-4 sm:px-8 py-4 rounded-xl w-32sm:w-44"
             >
@@ -53,8 +35,6 @@ const Header = () => {
           <a href="#projects">
             <motion.button
               whileHover={{ scale: 1.1 }}
-              onHoverStart={() => setButtonHover(true)}
-              onHoverEnd={() => setButtonHover(false)}
               whileTap={{ scale: 0.9 }}
               className="border-1 border-zinc-700 text-white cursor-none  font-semibold sm:text-lg mt-12 sm:px-8 py-4 rounded-xl w-32 sm:w-44"
             >
@@ -95,22 +75,6 @@ const Header = () => {
         }}
       ></div>
       <div className="absolute rounded-full top-1/2 h-full w-full max-w-96 max-h-96 bg-zinc-600 z-10"></div>
-      <div
-        style={{
-          zIndex: 1000,
-          position: "fixed",
-          transform: "translate(-50%, -50%)",
-          pointerEvents: "none",
-          left: `${cursorXY.x}px`,
-          top: `${cursorXY.y}px`,
-        }}
-      >
-        <div
-          className={` ${
-            !buttonHover ? "bg-zinc-500 w-32 h-32" : "bg-white w-44 h-44"
-          } opacity-15 rounded-full transition-all duration-300`}
-        ></div>
-      </div>
     </header>
   );
 };
