@@ -21,7 +21,7 @@ const Work = () => {
         id="#work"
         className="flex items-center justify-center mt-16 flex-col md:flex-row gap-8"
       >
-        <div className="border-1 border-zinc-700 rounded-xl p-7 w-full h-96">
+        <div className="border-1 border-zinc-700 rounded-xl p-7 w-full lg:h-96">
           <p className="text-xs font-bold mt-6 text-zinc-300">AS</p>
           <h5 className="text-3xl  mt-3 font-bold">Web Developer</h5>
 
@@ -30,7 +30,7 @@ const Work = () => {
             with multiple companies, handling all the code on my own.
           </p>
         </div>
-        <div className="border-1 border-zinc-700 rounded-xl p-7 w-full h-96">
+        <div className="border-1 border-zinc-700 rounded-xl p-7 w-full lg:h-96">
           <p className="text-xs  font-bold mt-6 text-zinc-300">AS</p>
           <h5 className="text-3xl  mt-3 font-bold">API Developer</h5>
 
@@ -41,7 +41,7 @@ const Work = () => {
             centers and web applications.
           </p>
         </div>
-        <div className="border-1 border-zinc-700 rounded-xl p-7 w-full h-96">
+        <div className="border-1 border-zinc-700 rounded-xl p-7 w-full lg:h-96">
           <p className="text-xs  font-bold mt-6 text-zinc-300">AS</p>
           <h5 className="text-3xl  mt-3 font-bold">Devops Engineer</h5>
 
