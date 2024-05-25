@@ -1,0 +1,7 @@
+.card {
+  @apply w-full h-full bg-white;
+}
+
+.cardImage {
+  @apply w-full h-full bg-black;
+}
