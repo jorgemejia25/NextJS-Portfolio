@@ -7,7 +7,7 @@ import styles from "./../styles/Header.module.css";
 
 const Header = () => {
   return (
-    <header className="relative cursor-none h-screen flex flex-col items-center justify-center bg-black text-white overflow-hidden">
+    <header className="relative h-screen flex flex-col items-center justify-center bg-black text-white overflow-hidden">
       <div className="z-40 text-center flex flex-col items-center justify-normal px-6 sm:px-12 ">
         <h3 className="text-xl sm:text-2xl md:text-3xl mb-8 text-zinc-500">
           Fullstack Development
